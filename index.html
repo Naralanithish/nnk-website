@@ -10,21 +10,21 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="nav-wrap">
+  <header>
     <div class="navbar">
-    <div class="brand">
-        <img src="logo.png" alt="NNK Logo">
+      <div class="brand">
+        <img src="images/logo.png" alt="NNK Logo">
         <h2>NNK Software Solutions</h2>
-    </div>
-
-    <div class="nav-links">
+      </div>
+      <nav class="nav-links">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="services.html">Services</a>
         <a href="project.html">Projects</a>
         <a href="contact.html">Contact</a>
+        <a href="login.html" class="btn-nav">Login</a>
+      </nav>
     </div>
-</div>
   </header>
 
   <main>
@@ -44,11 +44,9 @@
       </div>
     </section>
 
-    <section class="services-overview container" id="services">
+    <section class="services-overview container">
       <h2 class="section-title">Our Core Services</h2>
-      <div class="cards">
-        <!-- Services rendered dynamically by JavaScript -->
-      </div>
+      <div class="cards"></div>
     </section>
 
     <section class="about-blurb">
@@ -64,17 +62,13 @@
     <section class="founder-blurb">
       <div class="container">
         <h2 class="section-title">Meet Our Founder</h2>
-        <div class="founder-section">
-          <!-- Founder info rendered dynamically by JavaScript -->
-        </div>
+        <div class="founder-section"></div>
       </div>
     </section>
 
     <section class="projects-preview container">
       <h2 class="section-title">Selected Projects</h2>
-      <div class="projects-grid">
-        <!-- Projects rendered dynamically by JavaScript -->
-      </div>
+      <div class="projects-grid"></div>
       <p class="centre"><a href="project.html" class="link">View more projects →</a></p>
     </section>
   </main>
@@ -96,3 +90,17 @@
   <script src="script.js"></script>
 </body>
 </html>
+        </div>
+        <form class="auth-form" action="#" method="POST">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" required>
+
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required>
+
+          <button type="submit" class="btn btn-primary btn-block">Sign Up</button>
+        </form>
+        <p class="auth-footer-text">Already have an account? <a href="login.html">Log in</a></p>        

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sign Up — NNK Software Solutions</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="auth-page">
+  <header>
+    <div class="navbar">
+      <div class="brand">
+        <img src="images/logo.png" alt="NNK Logo">
+        <h2>NNK Software Solutions</h2>
+      </div>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="auth-container">
+    <div class="auth-wrapper">
+      <div class="auth-card">
+        <div class="auth-header">
+          <h1>Create Account</h1>
+          <p>Join NNK Software Solutions</p>
+        </div>
+
+        <form id="signupForm" class="auth-form">
+          <div class="form-group">
+            <label for="signup-name">Full Name</label>
+            <input type="text" id="signup-name" name="name" required placeholder="Your name">
+            <span class="error-msg" id="signupNameError"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="signup-company">Company/Organization</label>
+            <input type="text" id="signup-company" name="company" placeholder="Your company">
+          </div>
+
+          <div class="form-group">
+            <label for="signup-email">Email Address</label>
+            <input type="email" id="signup-email" name="email" required placeholder="your@email.com" autocomplete="email">
+            <span class="error-msg" id="signupEmailError"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="signup-phone">Phone Number</label>
+            <input type="tel" id="signup-phone" name="phone" placeholder="+91 XXXXX XXXXX">
+          </div>
+
+          <div class="form-group">
+            <label for="signup-password">Password</label>
+            <input type="password" id="signup-password" name="password" required placeholder="••••••••" autocomplete="new-password">
+            <span class="error-msg" id="signupPasswordError"></span>
+            <small>Minimum 8 characters, 1 uppercase, 1 number</small>
+          </div>
+
+          <div class="form-group">
+            <label for="signup-confirm">Confirm Password</label>
+            <input type="password" id="signup-confirm" name="confirm" required placeholder="••••••••">
+            <span class="error-msg" id="signupConfirmError"></span>
+          </div>
+
+          <div class="form-group checkbox">
+            <input type="checkbox" id="terms" name="terms" required>
+            <label for="terms">I agree to the <a href="terms.html" target="_blank">Terms & Conditions</a> and <a href="privacy.html" target="_blank">Privacy Policy</a></label>
+            <span class="error-msg" id="termsError"></span>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-full">Create Account</button>
+          <div id="signupMsg" class="form-msg"></div>
+        </form>
+
+        <div class="auth-footer">
+          <p>Already have an account? <a href="login.html">Sign in</a></p>
+        </div>
+      </div>
+
+      <div class="auth-sidebar">
+        <h2>Get Started</h2>
+        <ul>
+          <li>✓ Free account creation</li>
+          <li>✓ Track your projects</li>
+          <li>✓ Instant notifications</li>
+          <li>✓ 24/7 support access</li>
+          <li>✓ Secure & encrypted</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>NNK Software Solutions</strong>
+        <p>Andhra Pradesh, India • nnksoftwaresolutions@gmail.com</p>
+      </div>
+      <div class="footer-links">
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </div>
+    </div>
+    <div class="small">© <span id="year"></span> NNK Software Solutions</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sign Up — NNK Software Solutions</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="auth-page">
+  <header>
+    <div class="navbar">
+      <div class="brand">
+        <img src="images/logo.png" alt="NNK Logo">
+        <h2>NNK Software Solutions</h2>
+      </div>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="auth-container">
+    <div class="auth-wrapper">
+      <div class="auth-card">
+        <div class="auth-header">
+          <h1>Create Account</h1>
+          <p>Join NNK Software Solutions</p>
+        </div>
+
+        <form id="signupForm" class="auth-form">
+          <div class="form-group">
+            <label for="signup-name">Full Name</label>
+            <input type="text" id="signup-name" name="name" required placeholder="Your name">
+            <span class="error-msg" id="signupNameError"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="signup-company">Company/Organization</label>
+            <input type="text" id="signup-company" name="company" placeholder="Your company">
+          </div>
+
+          <div class="form-group">
+            <label for="signup-email">Email Address</label>
+            <input type="email" id="signup-email" name="email" required placeholder="your@email.com" autocomplete="email">
+            <span class="error-msg" id="signupEmailError"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="signup-phone">Phone Number</label>
+            <input type="tel" id="signup-phone" name="phone" placeholder="+91 XXXXX XXXXX">
+          </div>
+
+          <div class="form-group">
+            <label for="signup-password">Password</label>
+            <input type="password" id="signup-password" name="password" required placeholder="••••••••" autocomplete="new-password">
+            <span class="error-msg" id="signupPasswordError"></span>
+            <small>Minimum 8 characters, 1 uppercase, 1 number</small>
+          </div>
+
+          <div class="form-group">
+            <label for="signup-confirm">Confirm Password</label>
+            <input type="password" id="signup-confirm" name="confirm" required placeholder="••••••••">
+            <span class="error-msg" id="signupConfirmError"></span>
+          </div>
+
+          <div class="form-group checkbox">
+            <input type="checkbox" id="terms" name="terms" required>
+            <label for="terms">I agree to the <a href="terms.html" target="_blank">Terms & Conditions</a> and <a href="privacy.html" target="_blank">Privacy Policy</a></label>
+            <span class="error-msg" id="termsError"></span>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-full">Create Account</button>
+          <div id="signupMsg" class="form-msg"></div>
+        </form>
+
+        <div class="auth-footer">
+          <p>Already have an account? <a href="login.html">Sign in</a></p>
+        </div>
+      </div>
+
+      <div class="auth-sidebar">
+        <h2>Get Started</h2>
+        <ul>
+          <li>✓ Free account creation</li>
+          <li>✓ Track your projects</li>
+          <li>✓ Instant notifications</li>
+          <li>✓ 24/7 support access</li>
+          <li>✓ Secure & encrypted</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>NNK Software Solutions</strong>
+        <p>Andhra Pradesh, India • nnksoftwaresolutions@gmail.com</p>
+      </div>
+      <div class="footer-links">
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </div>
+    </div>
+    <div class="small">© <span id="year"></span> NNK Software Solutions</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

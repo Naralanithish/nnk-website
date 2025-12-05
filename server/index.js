@@ -70,23 +70,38 @@ app.get('/api/founder', (req, res) => res.json(founder));
 app.get('/api/projects', (req, res) => res.json(projects));
 
 app.post('/api/contact', async (req, res) => {
-  const { name, email, message } = req.body || {};
-  if (!name || !email || !message) return res.status(400).json({ error: 'Missing fields' });
+  const { name, email, phone, subject, message } = req.body || {};
+  
+  // Validate required fields
+  if (!name || !email || !subject || !message) {
+    return res.status(400).json({ ok: false, error: 'Missing required fields: name, email, subject, message' });
+  }
+
+  // Log the contact message
+  console.log('\n📧 NEW CONTACT MESSAGE:');
+  console.log('├─ Name:', name);
+  console.log('├─ Email:', email);
+  console.log('├─ Phone:', phone || 'Not provided');
+  console.log('├─ Subject:', subject);
+  console.log('├─ Message:', message);
+  console.log('└─ Time:', new Date().toLocaleString());
 
   if (Contact) {
     try {
       const c = new Contact({ name, email, message });
       await c.save();
-      return res.json({ ok: true });
+      console.log('✅ Saved to MongoDB\n');
+      return res.json({ ok: true, message: 'Thank you! We received your message.' });
     } catch (err) {
-      console.error('Error saving contact:', err);
-      return res.status(500).json({ error: 'Failed to save' });
+      console.error('❌ Error saving to DB:', err.message);
+      console.log('⚠️  Message logged but not saved to DB\n');
+      return res.json({ ok: true, message: 'Thank you! We received your message (DB save failed).' });
     }
   }
 
-  // If no DB, just log and return success for UX
-  console.log('Contact received (not saved, no DB):', { name, email, message });
-  return res.json({ ok: true, warning: 'No DB configured' });
+  // If no DB, just log and return success
+  console.log('✅ Message logged (no DB configured)\n');
+  return res.json({ ok: true, message: 'Thank you! We received your message.' });
 });
 
 // Fallback: serve index.html for any other route (SPA behavior)

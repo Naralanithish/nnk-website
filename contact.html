@@ -8,49 +8,122 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="nav-wrap">
-    <div class="container nav-inner">
-      <a class="brand" href="index.html"><img src="images/logo.svg" alt="NNK" class="logo"><span class="brand-text">NNK Software Solutions</span></a>
-      <nav class="nav" id="main-nav-contact">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="about.html" class="nav-link">About</a>
-        <a href="services.html" class="nav-link">Services</a>
-        <a href="project.html" class="nav-link">Projects</a>
-        <a href="contact.html" class="nav-link active cta">Contact</a>
+  <header>
+    <div class="navbar">
+      <div class="brand">
+        <img src="images/logo.png" alt="NNK Logo">
+        <h2>NNK Software Solutions</h2>
+      </div>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="project.html">Projects</a>
+        <a href="contact.html">Contact</a>
+        <a href="login.html" class="btn-nav">Login</a>
       </nav>
-      <button id="nav-toggle-5" class="nav-toggle" aria-label="Toggle menu">☰</button>
     </div>
   </header>
 
   <main class="container content">
     <h1>Contact Us</h1>
-    <p class="lead">Have a project in mind? Send us a message and we’ll reply within 24 hours.</p>
+    <p class="lead">Have a project in mind? Send us a message and we'll reply within 24 hours.</p>
 
     <div class="contact-grid">
-      <div class="contact-card">
-        <h3>Get in touch</h3>
-        <p>Email: <a href="mailto:nnksoftwaresolutions@gmail.com">nnksoftwaresolutions@gmail.com</a></p>
-        <p>Phone: +91 XXXXXXXXXX</p>
-        <p>Location: Andhra Pradesh, India</p>
+      <div class="contact-info">
+        <h3>Get in Touch</h3>
+        
+        <div class="info-card">
+          <h4>📧 Email</h4>
+          <p><a href="mailto:nnksoftwaresolutions@gmail.com">nnksoftwaresolutions@gmail.com</a></p>
+          <p class="small-text">We typically respond within 24 hours</p>
+        </div>
+
+        <div class="info-card">
+          <h4>📞 Phone</h4>
+          <p><a href="tel:+919876543210">+91 98765 43210</a></p>
+          <p class="small-text">Available Mon-Fri, 9 AM - 6 PM IST</p>
+        </div>
+
+        <div class="info-card">
+          <h4>📍 Location</h4>
+          <p>Andhra Pradesh, India</p>
+          <p class="small-text">Remote-first team, serving global clients</p>
+        </div>
+
+        <div class="info-card">
+          <h4>🔗 Social Links</h4>
+          <p>
+            <a href="https://www.linkedin.com/in/narala-nitishkumar-22a744280/" target="_blank" class="social-link">LinkedIn</a>
+            <a href="https://github.com" target="_blank" class="social-link">GitHub</a>
+          </p>
+        </div>
       </div>
 
-      <form id="contactForm" class="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
-        <label>
-          Name
-          <input type="text" name="name" required>
-        </label>
-        <label>
-          Email
-          <input type="email" name="email" required>
-        </label>
-        <label>
-          Message
-          <textarea name="message" rows="6" required></textarea>
-        </label>
+      <form id="contactForm" class="contact-form">
+        <h3>Send us a Message</h3>
+        
+        <div class="form-group">
+          <label for="name">Full Name *</label>
+          <input type="text" id="name" name="name" required placeholder="Your name">
+          <span class="error-msg" id="nameError"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address *</label>
+          <input type="email" id="email" name="email" required placeholder="your@email.com">
+          <span class="error-msg" id="emailError"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" placeholder="+91 XXXXX XXXXX">
+        </div>
+
+        <div class="form-group">
+          <label for="subject">Subject *</label>
+          <input type="text" id="subject" name="subject" required placeholder="Project inquiry, support, etc.">
+          <span class="error-msg" id="subjectError"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message *</label>
+          <textarea id="message" name="message" rows="6" required placeholder="Tell us about your project or inquiry..."></textarea>
+          <span class="error-msg" id="messageError"></span>
+        </div>
+
+        <div class="form-group checkbox">
+          <input type="checkbox" id="agree" name="agree" required>
+          <label for="agree">I agree to be contacted and share my details with NNK</label>
+          <span class="error-msg" id="agreeError"></span>
+        </div>
+
         <button type="submit" class="btn btn-primary">Send Message</button>
-        <p id="formMsg" class="form-msg" aria-live="polite"></p>
+        <div id="formMsg" class="form-msg"></div>
       </form>
     </div>
+
+    <section class="faq-section">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-grid">
+        <div class="faq-item">
+          <h4>What's your typical response time?</h4>
+          <p>We respond to all inquiries within 24 hours. For urgent matters, call us directly.</p>
+        </div>
+        <div class="faq-item">
+          <h4>Do you offer free consultations?</h4>
+          <p>Yes! We offer a free 30-minute initial consultation to understand your project needs.</p>
+        </div>
+        <div class="faq-item">
+          <h4>What's your project process?</h4>
+          <p>We follow: Discovery → Design → Development → Testing → Deployment → Support.</p>
+        </div>
+        <div class="faq-item">
+          <h4>Do you sign NDAs?</h4>
+          <p>Absolutely. We're happy to sign NDAs to protect your business ideas.</p>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="footer">
@@ -64,9 +137,9 @@
         <a href="terms.html">Terms</a>
       </div>
     </div>
-    <div class="small">© <span id="year5"></span> NNK Software Solutions</div>
+    <div class="small">© <span id="year"></span> NNK Software Solutions</div>
   </footer>
 
   <script src="script.js"></script>
 </body>
-</html>
+</html>      
