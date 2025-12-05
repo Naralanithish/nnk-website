@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Generate Placeholder Images</title>
+</head>
+<body>
+  <h1>Generating placeholder images...</h1>
+  
+  <script>
+    // Function to create and download images
+    function createAndDownloadImage(filename, width, height, bgColor, text, textColor = '#fff') {
+      const canvas = document.createElement('canvas');
+      canvas.width = width;
+      canvas.height = height;
+      const ctx = canvas.getContext('2d');
+      
+      // Background
+      ctx.fillStyle = bgColor;
+      ctx.fillRect(0, 0, width, height);
+      
+      // Text
+      ctx.fillStyle = textColor;
+      ctx.font = 'bold 24px Arial';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillText(text, width / 2, height / 2);
+      
+      // Download
+      const link = document.createElement('a');
+      link.href = canvas.toDataURL('image/jpeg', 0.9);
+      link.download = filename;
+      link.click();
+    }
+    
+    // Generate images with delays
+    setTimeout(() => createAndDownloadImage('hero.jpg', 600, 400, '#2196F3', 'Software Development'), 100);
+    setTimeout(() => createAndDownloadImage('project1.jpg', 400, 300, '#FF9800', 'Billing Software'), 300);
+    setTimeout(() => createAndDownloadImage('project2.jpg', 400, 300, '#4CAF50', 'Web Automation'), 500);
+    setTimeout(() => createAndDownloadImage('project3.jpg', 400, 300, '#9C27B0', 'E-Commerce'), 700);
+    setTimeout(() => createAndDownloadImage('project4.jpg', 400, 300, '#F44336', 'Task App'), 900);
+    
+    document.body.innerHTML += '<p>Images downloaded! Move them to the <strong>images/</strong> folder.</p>';
+  </script>
+</body>
+</html>
